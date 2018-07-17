@@ -30,7 +30,7 @@ public class DateTool {
 	/**
 	 * 根据指定格式返回日期时间字符串
 	 * @param date 日期
-	 * @param format 格式
+	 * @param format 格式，如 yyyy-MM-dd HH:mm:ss
 	 * @return
 	 */
 	public static String getDateStr(java.util.Date date,String format) {
