@@ -26,6 +26,15 @@ public class DateTool {
 	public static String getDateStr(java.util.Date date) {
 		return getDateStr(date, "yyyy-MM-dd HH:mm:ss");
 	}
+
+	/**
+	 * 按指定格式返回当前日期时间字符串
+	 * @param format
+	 * @return
+	 */
+	public static String getDateStr(String format){
+		return getDateStr(new java.util.Date(), format);
+	}
 	
 	/**
 	 * 根据指定格式返回日期时间字符串
@@ -37,12 +46,13 @@ public class DateTool {
 		SimpleDateFormat sdf=new SimpleDateFormat(format);
 		return sdf.format(date);
 	}
-	
+
 	/**
 	 * 根据字符串返回日期
-	 * @param date
-	 * @return
-	 * @throws ParseException 
+	 * @param date 日期字符串
+	 * @param format 日期格式
+	 * @return java.util.Date
+	 * @throws ParseException
 	 */
 	public static java.util.Date getDateFromStr(String date,String format) throws ParseException {
 		SimpleDateFormat sdf=new SimpleDateFormat(format);
