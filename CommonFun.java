@@ -38,5 +38,13 @@ public class CommonFun {
 		}
 		return hexValue.toString().toUpperCase();
 	}
+	
+	/**
+	 * 获取GUID
+	 * @return
+	 */
+	public static String UUID() {
+		return  java.util.UUID.randomUUID().toString().toUpperCase();
+	}
 
 }
